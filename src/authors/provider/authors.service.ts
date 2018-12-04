@@ -34,7 +34,7 @@ export class AuthorsService {
         return await this.authorRepository.save(author);
     }
 
-    async delete(id){
+    async remove(id){
         const author = await this.authorRepository.findOne(id);
         return await this.authorRepository.remove(author);
     }
