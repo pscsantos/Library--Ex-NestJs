@@ -1,3 +1,4 @@
+/*Exemplo de módulo dinâmico
 import { Module, DynamicModule } from '@nestjs/common';
 import { createDatabaseProviders } from './database.providers';
 import { Connection } from './connection.provider';
@@ -15,3 +16,4 @@ export class DatabaseModule {
     };
   }
 }
+*/
