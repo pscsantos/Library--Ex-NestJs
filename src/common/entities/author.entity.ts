@@ -1,22 +1,22 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
-import { CreateAuthorDto } from '../dto/create-author.dto';
+import { CreateAuthorDto } from '../../authors/dto/create-author.dto';
 
 @Entity()
 export class Author {
-
+    
     public constructor(data?: CreateAuthorDto){
         if(data){
             this.name = data.name;
             this.age  = data.age;
         }
-    }
+    }    
 
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column({length: 500})
-    name: String;
+    name?: String;
 
     @Column('int')
-    age: number;
+    age?: number;
 }

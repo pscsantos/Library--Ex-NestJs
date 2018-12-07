@@ -1,4 +1,4 @@
-import { Author } from './author.entity';
+import { Author } from '../common/entities/author.entity';
 
 describe('Author', () => {
   it('should be defined', () => {

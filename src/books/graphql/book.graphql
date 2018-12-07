@@ -1,0 +1,25 @@
+type Book {
+    id: Int!
+    title: String
+    volume: Int
+    yearOfPublication: Int
+}
+
+input CreateBookInput {
+    title: String
+    volume: Int
+    yearOfPublication: Int
+}
+
+type Query{
+    book(id: Int!): Book
+    books: [Book]
+}
+
+type Mutation {
+    createBook(createBookInput:  CreateBookInput): Book
+}
+
+type Subscription {
+    bookCreate: Book
+}
